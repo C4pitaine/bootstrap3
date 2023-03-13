@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <!--Toujours déclarer le bootstrap avant notre propre css comme ça si on va en contradiction avec bootstrap c'est nous qui prenons la main-->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Bootstrap53</title>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <h1>Hello</h1>
+        <div class="row">              <!--Row est un flex container, il faut mettre les rows dans un container-fluid sinon on a une barre de scroll horizontale-->
+            <div class="col-xl-2 col-md-8 col-1 block">1</div>  
+            <!--tant qu'ils sont plus grand que 1200px (xl) ils font les col demandé dès qu'ils font moins ils retrouvent le col de 12 sauf si on a définit un autre breakpoint(s) ou quelque chose de plus bas-->
+            <div class="col-xl-8 col-md-2 col-10 block">2</div>
+            <div class="col-xl-2 col-md-2 col-1 block">3</div>
+        </div>
+    </div>  
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-4 block">1</div>
+            <div class="col-4 block d-none d-md-block">2</div> 
+            <!--d-none fait un display none / d-md-block fera que lorsque qu'on casse le breakpoint le d-none prendra la place du d-md-block-->
+            <div class="w-100 d-block d-md-none"></div>  
+            <!-- il fait un colomne break, il fait une séparation sans remplir l'espace (comme un retour à la ligne)-->
+            <div class="col-4 block d-block d-md-none">3</div>
+            <div class="col-4 block">4</div>
+        </div>
+        <div class="row boite align-items-center">
+            <div class="col block">1</div>
+            <div class="col block">2</div>
+            <div class="col block">3</div>
+        </div>
+        <div class="row boite">
+            <div class="col block align-self-start">1</div>
+            <div class="col block align-self-center">2</div>
+            <div class="col block align-self-end">3</div>
+        </div>
+        <div class="row boite justify-content-center align-items-center">
+            <div class="col-4 block">1</div>
+            <div class="col-4 block">2</div>
+        </div>
+        <div class="row boite justify-content-between align-items-center">
+            <div class="col-4 block">1</div>
+            <div class="col-4 block">2</div>
+        </div>
+    </div>
+</body>
+</html>
